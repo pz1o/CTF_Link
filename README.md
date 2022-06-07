@@ -22,7 +22,11 @@ https://hexagonal-soursop-831.notion.site/DASCTF-may-a87c7f0235694934a764c39ef38
 
 考研摆烂人，属实有点寄
 
-llvm pass差点把我pass掉，看了一下，好像是里面套了个虚拟机，指令也不多，但不知道怎么调试，等等别的大师傅的博客，或者哪天考研想摆烂了来重新看一下pass
+llvm pass差点把我pass掉，看了一下，等等别的大师傅的博客，或者哪天考研想摆烂了来重新看一下pass
+
+偶然看到记录一下
+
+[CISCN 2022 初赛 satool writeup – 数字的秘密基地 (lakwsh.net)](https://lakwsh.net/?p=457)
 
 newest_note：libc 2.34 UAF，我直接狂喜，这不乱打，fastbin reverse to tcache + fastbin double free。后来发现限制了free次数。数组越界我确实没看到，一直在想怎么少free，感觉做不出来就得重新看是不是哪里少看了漏洞。第二天早上重新看，直接看到数组越界，下面说一下思路
 
