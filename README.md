@@ -35,11 +35,11 @@ https://hexagonal-soursop-831.notion.site/CISCN-2022-e4d13d876716434497bbc9ebed4
 1. login_normal：学弟手很快，直接拿字符shellcode拿了一血，我还在翻博客...
 2. newest_note：数组越界，我们可以利用这个来完成edit功能，然后想到tcache double free，下面思路就清晰了，没开沙箱 我们可以不用kiwi，然后高版本ogg其实不太好用，FSOP也可以，但有点麻烦，好像是有个emma（还没细看）我这里用的是rop栈，总共11次free，我们tcache double free两次，一次泄露基地址，另一次直接分配到栈上 system sh即可
 
-# PWNhub 六月
+## PWNhub 六月
 
 星期六学高数去了，星期一晚上做一下
 
-**sandbox**
+### **sandbox**
 
 本来准备写libc_aexit，迁移栈，发现没有好用的gadget，于是想fsop
 
@@ -47,3 +47,12 @@ https://hexagonal-soursop-831.notion.site/CISCN-2022-e4d13d876716434497bbc9ebed4
 
 https://hexagonal-soursop-831.notion.site/PWNHUB-5278a519b2a044feb9d42a52f4efa59e
 
+## CISCN 2022 华东北
+
+堆的狂欢，一个2.33，一个2.34直接house of kiwi一把梭
+
+还有一个因为做misc去了 所以没时间做了，过几天复现
+
+先上传了
+
+https://hexagonal-soursop-831.notion.site/CISCN2022-fb473fa4662d4569aad0ed80e603f612
