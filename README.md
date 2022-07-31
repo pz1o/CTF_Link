@@ -2,6 +2,46 @@
 
 记录一下一些比赛
 
+## 2022强网杯
+
+诸神黄昏，肝了一天肝出一道题来，
+
+### **pokemongo**
+
+由于一些傻逼问题，没拿到前三
+
+我愿称之为go绝活哥
+
+https://blog.stalkr.net/2022/01/universal-go-exploit-using-data-races.html?m=1
+
+这个就是作者，只要读完这篇就可以做下这道题了，
+
+回到题目本身，具体程序流程就是让你输入base64编码，然后解码就可以执行你写的go程序
+
+**这道题的核心就是不引入外部包进行逃逸，从而getshell**，但这个题还有些问题我选择了ORW
+
+这是原作者的代码，放链接了https://github.com/StalkR/misc/blob/master/go/gomium/exploit.go
+
+具体来说就是利用race来劫持程序执行流
+
+这道题还有很多坑的地方：
+
+1. 远程环境是1.18的go，其中1.18的传参规则是发生变化的，本地测试了好多版本都可以通过，远程却无法通过
+2. 你写的go程序会被执行，需要在执行ORW之后进行exit，否则执行程序的进程就会报错，导致无法输出
+3. 玄学问题，无法启shell，可能子进程的问题？
+
+EXP
+
+放这里了
+
+https://pz1o.notion.site/2022QWB-18f3e5a4b3c2439eb45aa500b4f7103b
+
+![image-20220731183942231](README/image-20220731183942231.png)
+
+
+
+
+
 ## CISCN 2022 华东北
 
 堆的狂欢，一个2.33，一个2.34直接house of kiwi一把梭
